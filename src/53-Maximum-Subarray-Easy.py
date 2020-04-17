@@ -6,15 +6,12 @@ class Solution(object):
         """
         max_sum = nums[0]
         cur_sum = 0
-        cur_idx = 0
         for i in range(len(nums)):
-            val = nums[i]
-            cur_sum = cur_sum + val
-            if(val>cur_sum):
-                cur_sum=val
-                cur_idx=i
-            if(cur_sum>=max_sum):
-                max_sum = cur_sum
+            cur_sum=cur_sum + nums[i]
+            if(nums[i]>cur_sum):
+                cur_sum=nums[i]
+            if(cur_sum>max_sum):
+                max_sum=cur_sum
         return max_sum
 
 
